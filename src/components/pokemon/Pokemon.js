@@ -6,30 +6,40 @@ import { Bar } from "./Bar";
 import pokeball from "../../assets/img/pokeball.jpg";
 
 export const Pokemon = () => {
-  const pokemon = useSelector(state => state.pokemon);  
+  const pokemon = useSelector(state => state.pokemon);
 
   const close = () => {
     document.getElementById("pokemon").classList.remove("active");
     const items = document.getElementsByClassName("list-item-selected");
     if (items.length > 0)
       items[0].classList.remove("list-item-selected");
+
+    const items2 = document.getElementsByClassName("pokemon-card-button");
+    for (let i = 0; i < items2.length; i++) {
+      items2[i].classList.remove("pokemon-card-button-active");
+    }
+
+    const cards = document.getElementsByClassName("pokemon-card-item");
+    for (let i = 0; i < cards.length; i++) {
+      cards[i].style.display = "none";
+    }
   }
 
   const open = (e) => {
     const items = document.getElementsByClassName("pokemon-card-button");
     let item = 0;
-    for(let i = 0; i < items.length; i++) {
+    for (let i = 0; i < items.length; i++) {
       items[i].classList.remove("pokemon-card-button-active");
-      if(items[i] === e.target) 
+      if (items[i] === e.target)
         item = i;
     }
 
     const cards = document.getElementsByClassName("pokemon-card-item");
-    for(let i = 0; i < cards.length; i++) {
-      cards[i].style.display="none";
+    for (let i = 0; i < cards.length; i++) {
+      cards[i].style.display = "none";
     }
 
-    cards[item].style.display="block";
+    cards[item].style.display = "block";
     e.target.classList.add("pokemon-card-button-active");
   }
 
@@ -65,7 +75,7 @@ export const Pokemon = () => {
                   Stats
                 </div>
                 {
-                  pokemon.evolutions && 
+                  pokemon.evolutions &&
                   <div className="pokemon-card-button" id="card-button-3" onClick={open}>
                     Evolutions
                   </div>

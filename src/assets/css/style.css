@@ -1,0 +1,717 @@
+:root {
+    --pokecolor-rock: #B69E31;
+    --pokecolor-rock-light: #F0EFEF;
+    --pokecolor-rock-filter: invert(83%) sepia(34%) saturate(402%) hue-rotate(7deg) brightness(86%) contrast(84%);
+
+
+    --pokecolor-ghost: #70559B;
+    --pokecolor-ghost-light: #e2ddeb;
+    --pokecolor-ghost-filter: invert(46%) sepia(12%) saturate(1498%) hue-rotate(221deg) brightness(91%) contrast(89%);
+
+
+    --pokecolor-steel: #B7B9D0;
+    --pokecolor-steel-light: #f1f1f6;
+    --pokecolor-steel-filter: invert(89%) sepia(13%) saturate(541%) hue-rotate(199deg) brightness(84%) contrast(99%);
+
+    --pokecolor-water: #6493EB;
+    --pokecolor-water-light: #e3ebfb;
+    --pokecolor-water-filter: invert(63%) sepia(10%) saturate(4996%) hue-rotate(193deg) brightness(99%) contrast(88%);
+
+    --pokecolor-grass: #74CB48;
+    --pokecolor-grass-light: #e3f5da;
+    --pokecolor-grass-filter: invert(100%) sepia(26%) saturate(5769%) hue-rotate(38deg) brightness(102%) contrast(63%);
+
+    --pokecolor-psychic: #FB5584;
+    --pokecolor-psychic-light: #fedde6;
+    --pokecolor-psychic-filter: invert(57%) sepia(74%) saturate(1808%) hue-rotate(305deg) brightness(99%) contrast(99%);
+
+    --pokecolor-ice: #9AD6DF;
+    --pokecolor-ice-light: #e6f7f9;
+    --pokecolor-ice-filter: invert(84%) sepia(30%) saturate(396%) hue-rotate(160deg) brightness(96%) contrast(95%);
+
+    --pokecolor-dark: #75574C;
+    --pokecolor-dark-light: #e2dcd7;
+    --pokecolor-dark-filter: invert(41%) sepia(8%) saturate(891%) hue-rotate(332deg) brightness(94%) contrast(83%);
+
+    --pokecolor-fairy: #E69EAC;
+    --pokecolor-fairy-light: #f0e6f0;
+    --pokecolor-fairy-filter: invert(79%) sepia(32%) saturate(344%) hue-rotate(278deg) brightness(97%) contrast(85%);
+
+    --pokecolor-normal: #AAA67F;
+    --pokecolor-normal-light: #f1f1f6;
+    --pokecolor-normal-filter: invert(70%) sepia(24%) saturate(297%) hue-rotate(16deg) brightness(95%) contrast(89%);
+
+    --pokecolor-fighting: #C12239;
+    --pokecolor-fighting-light: #f1d9d9;
+    --pokecolor-fighting-filter: invert(57%) sepia(60%) saturate(4995%) hue-rotate(320deg) brightness(76%) contrast(88%);
+
+    --pokecolor-flying: #A891EC;
+    --pokecolor-flying-light: #e6e6f0;
+    --pokecolor-flying-filter: invert(79%) sepia(3%) saturate(3292%) hue-rotate(212deg) brightness(94%) contrast(89%);
+
+    --pokecolor-poison: #A43E9E;
+    --pokecolor-poison-light: #e6d9e6;
+    --pokecolor-poison-filter: invert(49%) sepia(12%) saturate(2735%) hue-rotate(251deg) brightness(82%) contrast(84%);
+
+    --pokecolor-ground: #DEC16B;
+    --pokecolor-ground-light: #f1e6d9;
+    --pokecolor-ground-filter: invert(74%) sepia(17%) saturate(1019%) hue-rotate(12deg) brightness(86%) contrast(82%);
+
+    --pokecolor-bug: #A7B723;
+    --pokecolor-bug-light: #edf1d3;
+    --pokecolor-bug-filter: invert(81%) sepia(63%) saturate(479%) hue-rotate(13deg) brightness(83%) contrast(89%);
+
+
+    --pokecolor-fire: #F57D31;
+    --pokecolor-fire-light: #FDE5D6;
+    --pokecolor-fire-filter: invert(82%) sepia(28%) saturate(7493%) hue-rotate(329deg) brightness(101%) contrast(94%);
+
+    --pokecolor-electric: #F9CF30;
+    --pokecolor-electric-light: #fef5d6;
+    --pokecolor-electric-filter: invert(78%) sepia(99%) saturate(389%) hue-rotate(335deg) brightness(102%) contrast(96%);
+
+    --pokecolor-dragon: #7037FF;
+    --pokecolor-dragon-light: #e6d9e6;
+    --pokecolor-dragon-filter: invert(48%) sepia(43%) saturate(5462%) hue-rotate(232deg) brightness(95%) contrast(94%);
+
+
+
+
+    --main-color: #74CB48;
+    --main-color-light: #e3f5da;
+    --main-filter: invert(100%) sepia(26%) saturate(5769%) hue-rotate(38deg) brightness(102%) contrast(63%);
+
+    --dark-gray: #212121;
+    --medium-gray: #666666;
+    --light-gray: #E0E0E0;
+    --white: #FFFFFF;
+    --background: #F7F7F7;
+
+    --pokelist-width: 500px;
+    --form-height: 250px;
+
+    --poppins: 'Poppins', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+body {
+    font-family: var(--poppins);
+    font-size: 1rem;
+    background-color: var(--main-color-light);
+    transition: .3s ease-in-out;
+}
+
+.ghost {
+    --main-color: var(--pokecolor-ghost);
+    --main-color-light: var(--pokecolor-ghost-light);
+    --main-filter: var(--pokecolor-ghost-filter);
+    --medium-gray: var(--light-gray);
+}
+
+.rock {
+    --main-color: var(--pokecolor-rock);
+    --main-color-light: var(--pokecolor-rock-light);
+    --main-filter: var(--pokecolor-rock-filter);
+}
+
+.electric {
+    --main-color: var(--pokecolor-electric);
+    --main-color-light: var(--pokecolor-electric-light);
+    --main-filter: var(--pokecolor-electric-filter);
+}
+
+.steel {
+    --main-color: var(--pokecolor-steel);
+    --main-color-light: var(--pokecolor-steel-light);
+    --main-filter: var(--pokecolor-steel-filter);
+}
+
+.ground {
+    --main-color: var(--pokecolor-ground);
+    --main-color-light: var(--pokecolor-ground-light);
+    --main-filter: var(--pokecolor-ground-filter);
+}
+
+.bug {
+    --main-color: var(--pokecolor-bug);
+    --main-color-light: var(--pokecolor-bug-light);
+    --main-filter: var(--pokecolor-bug-filter);
+}
+
+.psychic {
+    --main-color: var(--pokecolor-psychic);
+    --main-color-light: var(--pokecolor-psychic-light);
+    --main-filter: var(--pokecolor-psychic-filter);
+}
+
+.poison {
+    --main-color: var(--pokecolor-poison);
+    --main-color-light: var(--pokecolor-poison-light);
+    --main-filter: var(--pokecolor-poison-filter);
+    --medium-gray: var(--light-gray);
+}
+
+.water {
+    --main-color: var(--pokecolor-water);
+    --main-color-light: var(--pokecolor-water-light);
+    --main-filter: var(--pokecolor-water-filter);
+}
+
+.ice {
+    --main-color: var(--pokecolor-ice);
+    --main-color-light: var(--pokecolor-ice-light);
+    --main-filter: var(--pokecolor-ice-filter);
+}
+
+.dragon {
+    --main-color: var(--pokecolor-dragon);
+    --main-color-light: var(--pokecolor-dragon-light);
+    --main-filter: var(--pokecolor-dragon-filter);
+}
+
+.fire {
+    --main-color: var(--pokecolor-fire);
+    --main-color-light: var(--pokecolor-fire-light);
+    --main-filter: var(--pokecolor-fire-filter);
+}
+
+.fighting {
+    --main-color: var(--pokecolor-fighting);
+    --main-color-light: var(--pokecolor-fighting-light);
+    --main-filter: var(--pokecolor-fighting-filter);
+}
+
+.flying {
+    --main-color: var(--pokecolor-flying);
+    --main-color-light: var(--pokecolor-flying-light);
+    --main-filter: var(--pokecolor-flying-filter);
+}
+
+.grass {
+    --main-color: var(--pokecolor-grass);
+    --main-color-light: var(--pokecolor-grass-light);
+    --main-filter: var(--pokecolor-grass-filter);
+}
+
+.dark {
+    --main-color: var(--pokecolor-dark);
+    --main-color-light: var(--pokecolor-dark-light);
+    --main-filter: var(--pokecolor-dark-filter);
+    --medium-gray: var(--light-gray);
+}
+
+.normal {
+    --main-color: var(--pokecolor-normal);
+    --main-color-light: var(--pokecolor-normal-light);
+    --main-filter: var(--pokecolor-normal-filter);
+}
+
+.fairy {
+    --main-color: var(--pokecolor-fairy);
+    --main-color-light: var(--pokecolor-fairy-light);
+    --main-filter: var(--pokecolor-fairy-filter);
+}
+
+#pokemon-card-2, #pokemon-card-3 {
+    display: none;
+}
+
+.pokemon-card-buttons {
+    align-items: flex-start;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: space-between;
+    background-color: var(--main-color-light);
+    border-radius: 30px;
+    margin-bottom: 2rem;
+}
+
+.pokemon-card-button {
+    border-radius: 30px;
+    padding: .5rem 1rem;
+    font-weight: 700;
+    color: var(--main-color);
+    cursor: pointer;
+}
+
+.pokemon-card-button-active {
+    background-color: var(--main-color);
+    color: var(--white);
+}
+
+.pokemon-card-button:hover {
+    background-color: var(--main-color);
+    color: var(--main-color-light);
+}
+
+.pokeball-div {
+    width: 100%;
+}
+
+.pokeball {
+    width: 200px;
+    filter: var(--main-filter);
+}
+
+.poke-form {
+    height: var(--form-height);
+    box-shadow: var(--main-color) 0 0 15px;
+}
+
+.form-group {
+    width: 100%;
+    height: auto;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.input {
+    width: 90%;
+    border: none;
+    border-bottom: 3px solid var(--main-color);
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: var(--dark-gray);
+    background-color: var(--main-color-light);
+    transition: .1s ease-in-out;
+    outline: none;
+    margin-bottom: 2rem;
+    padding: 1rem 0;
+}
+
+.button {
+    width: 90%;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: var(--main-color-light);
+    background-color: var(--main-color);
+    border: var(--main-color) 3px solid;
+    transition: .1s ease-in-out;
+    cursor: pointer;
+    padding: .5rem 0;
+}
+
+.button:hover {
+    background-color: var(--main-color-light);
+    color: var(--main-color);
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+.poke-list {
+    overflow-y: scroll;
+    height: calc(100vh - var(--form-height));
+}
+
+.poke-bar {
+    height: 100vh;
+    width: var(--pokelist-width);
+    position: fixed;
+    left: 0;
+
+}
+
+.poke-logo {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    text-decoration: none;
+}
+
+.text-logo {
+    color: var(--main-color);
+    margin-left: 1rem;
+}
+
+.img-logo {
+    width: 50px;
+    filter: var(--main-filter);
+}
+
+.list-item {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    transition: 0.1s ease-in-out;
+    color: var(--main-color);
+    border: transparent 3px solid;
+    box-shadow: var(--main-color) 0px 0px 10px;
+    margin: .5rem 0;
+}
+
+.list-item:hover {
+    background-color: var(--main-color);
+    color: var(--main-color-light);
+}
+
+.list-item-selected {
+    background-color: var(--main-color);
+    color: var(--main-color-light);
+}
+
+.list-div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.list-img {
+    width: 75px;
+}
+
+.list-title,
+.list-div {
+    margin: 1rem;
+}
+
+.pokemon {
+    margin-left: var(--pokelist-width);
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    min-height: 100vh;
+    max-height: 100%;
+    align-items: center;
+    justify-content: space-evenly;
+    bottom: inherit;
+    background-color: var(--main-color);
+}
+
+.pokemon-img-div {
+    width: 500px;
+    background-color: var(--main-color-light);
+    box-shadow: var(--main-color-light) 0px 0px 10px;
+    border-radius: 50%;
+    margin: 1rem 0;
+}
+
+.pokemon-main-img {
+    width: 90%;
+    overflow: visible;
+}
+
+.pokemon-desc {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+    font-weight: 400;
+    max-width: 400px;
+    width: 100%;
+}
+
+.pokemon-card {
+    margin: 2rem 0;
+    background-color: var(--white);
+    box-shadow: var(--main-color-light) 0px 0px 10px;
+    padding: 0 2rem;
+    padding-top: 1.5rem;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    min-width: 500px;
+    min-height: 600px;
+}
+
+.pokemon-card-item {
+    margin: auto .5rem;
+}
+
+.pokemon-id {
+    color: var(--medium-gray);
+}
+
+.pokemon-name {
+    color: var(--main-color-light);
+}
+
+.pokemon-alias {
+    font-size: 1.3rem;
+    font-weight: 300;
+    font-style: italic;
+}
+
+.pokemon-types {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.pokemon-type {
+    color: var(--main-color);
+    background-color: var(--main-color-light);
+    box-shadow: var(--main-color-light) 0 0 10px;
+    margin: 0.5rem;
+    padding: .5rem 1rem;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+
+}
+
+.pokemon-type-icon {
+    width: 25px;
+    margin-right: 1rem;
+}
+
+.poke-text {
+    margin: 0 auto;
+    margin-bottom: 1rem;
+    color: var(--main-color);
+}
+
+.pokemon-about {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+.pokemon-about-p {
+    margin: 0 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.6rem;
+    font-weight: 500;
+}
+
+.pokemon-about-icon {
+    margin-right: 1rem;
+    color: var(--main-color);
+}
+
+.pokemon-about-title {
+    color: #666666;
+    font-weight: 300;
+}
+
+.pokemon-stats {
+    display: flex;
+    margin-bottom: 2rem;
+}
+
+.pokemon-stats-values {
+    display: block;
+    width: 100%;
+}
+
+.pokemon-stat {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.pokemon-stat-title {
+    font-weight: 700;
+    color: var(--main-color);
+}
+
+.pokemon-stat-value {
+    min-width: 30px;
+}
+
+.pokemon-stat-title,
+.pokemon-stat {
+    margin: 2rem .5rem;
+}
+
+
+.pokemon-abilities {
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.pokemon-abilitie {
+    font-size: 1rem;
+    background-color: var(--main-color);
+    box-shadow: var(--main-color) 0 0 10px;
+    color: var(--white);
+    padding: .5rem 1rem;
+    border-radius: 30px;
+    font-weight: 700;
+    margin: 1rem 1.5rem;
+}
+
+.pokemon-evolution {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pokemon-evolution-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1rem auto;
+}
+
+.pokemon-evolution-img {
+    width: 100px;
+    background-color: var(--main-color-light);
+    border-radius: 50%;
+}
+
+.pokemon-evolution-name {
+    font-size: 1rem;
+    margin: .5rem 0;
+}
+
+.pokemon-evolution-icon {
+    width: 25px;
+    margin: .5rem .3rem;
+}
+
+.arrow {
+    color: var(--main-color);
+    font-size: 3rem;
+}
+
+.pokemon-button {
+    display: none;
+}
+
+.bar {
+    width: 100%;
+    height: 20px;
+    border-radius: 10px;
+    background-color: var(--main-color-light);
+}
+
+.progress {
+    display: block;
+    height: 20px;
+    border-radius: 10px;
+    background-color: var(--main-color);
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+
+@media screen and (max-width: 1100px) {
+    :root {
+        --pokelist-width: 300px;
+    }
+}
+
+@media screen and (max-width: 890px) {
+    :root {
+        --pokelist-width: 100%;
+    }
+
+    .container {
+        width: 100%;
+        position: relative;
+    }
+
+    .poke-bar {
+        left: auto;
+        width: 70%;
+    }
+
+    .pokemon {
+        margin-left: 0;
+        position: absolute;
+        transition: 0.1s ease-in-out;
+        bottom: 0;
+    }
+
+    .active {
+        bottom: inherit;
+    }
+
+    .pokemon-card {
+        width: 80%;
+        min-width: 80%;
+        min-height: 100%;
+        padding: 0;
+        margin: 2rem 0;
+        border: none;
+    }
+
+    .pokemon-stats {
+        padding: 0 1rem;
+    }
+
+    .bar {
+        margin: 0 .5rem;
+    }
+
+    .active .pokemon-button {
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        cursor: pointer;
+        z-index: 1;
+    }
+
+    .close-icon {
+        font-size: 2.5rem;
+        color: var(--main-color-light);
+    }
+    .pokemon-card-buttons {
+        margin: 2rem 1rem;
+    }
+
+    .pokemon-div-img {
+        margin: 0;
+    }
+
+}
+
+@media screen and (max-width: 500px) {
+    .pokemon-img-div {
+        width: 80%;
+        margin: 0 auto;
+        margin-top: 5rem;
+    }
+
+    .pokemon-card {
+        min-width: 100%;
+    }
+
+    .poke-bar {
+        width: 100%;
+    }
+
+
+}
+
+@media screen and (max-width: 360px) {
+
+    .pokemon-types,
+    .pokemon-about,
+    .pokemon-abilities {
+        flex-direction: column;
+    }
+
+    .pokemon-type {
+        justify-content: center;
+    }
+}

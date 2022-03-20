@@ -1,0 +1,1 @@
+export const icons = require.context("../img/types", true);

@@ -21,7 +21,7 @@ export const Pokemon = () => {
 
     const cards = document.getElementsByClassName("pokemon-card-item");
     for (let i = 0; i < cards.length; i++) {
-      cards[i].style.display = "none";
+      cards[i].classList.remove("pokemon-card-item-active");
     }
   }
 
@@ -35,11 +35,12 @@ export const Pokemon = () => {
     }
 
     const cards = document.getElementsByClassName("pokemon-card-item");
+
     for (let i = 0; i < cards.length; i++) {
-      cards[i].style.display = "none";
+      cards[i].classList.remove("pokemon-card-item-active");
     }
 
-    cards[item].style.display = "block";
+    cards[item].classList.add("pokemon-card-item-active")
     e.target.classList.add("pokemon-card-button-active");
   }
 

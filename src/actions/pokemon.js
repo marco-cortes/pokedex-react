@@ -96,10 +96,10 @@ export const getPokemon = (id, search = false) => {
 
         const cards = document.getElementsByClassName("pokemon-card-item");
         for (let i = 0; i < cards.length; i++) {
-            cards[i].style.display = "none";
+            cards[i].classList.remove("pokemon-card-item-active");
         }
 
-        cards[0].style.display = "block";
+        cards[0].classList.add("pokemon-card-item-active");
         item[0].classList.add("pokemon-card-button-active");
     }
 }
